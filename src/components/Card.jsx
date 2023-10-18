@@ -2,7 +2,9 @@ import React from 'react'
 
 export default function Card() {
   return (
-    <div className='card'>
+    <div className="content p-40">
+      <div className='d-flex'>
+      <div className='card'>
         <div className='favorite'>
           <img src='/img/heard-unliked.svg' alt='unliked'/>
         </div>
@@ -20,5 +22,7 @@ export default function Card() {
           </button>
           </div>
         </div>
+      </div>
+    </div>
   )
 }

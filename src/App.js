@@ -1,8 +1,8 @@
 //Компоненты
-import Card from './components/Card'
-import Header from './components/Header'
-import Overlay from './components/Overlay';
-import Main from './components/Main';
+import Card from './components/Card/Card'
+import Header from './components/Header/Header'
+import Overlay from './components/Overlay/Overlay';
+import Main from './components/Main/Main';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <Header/>
       <Overlay/>
       <Main/>
+      <Card/>
       <Card/>
     </div>
   );

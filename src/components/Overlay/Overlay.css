@@ -1,0 +1,129 @@
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.overlay__drawer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 385px;
+    height: 100%;
+    right: 0;
+    background: #FFF;
+    box-shadow: -10px 4px 24px 0px rgba(0, 0, 0, 0.10);
+    padding: 30px;
+}
+
+.overlay__cart-btn {
+    flex: 1;
+}
+
+.overlay__cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 1px solid #F3F3F3;
+    background: #FFF;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+
+.overlay__image {
+    margin-right: 20px;
+}
+
+.overlay__zone {
+    margin-right: 20px;
+}
+
+.overlay__zone-text {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.overlay__total-list {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.overlay__total-image {
+    flex: 1;
+    height: 1px;
+    border-bottom: 1px dashed #dfdfdf;
+    margin: 0 7px;
+}
+
+.overlay__wraper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.overlay__price {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.draver__title {
+    margin: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.delteBtn:hover {
+    opacity: 1;
+}
+  
+  .cartButton {
+    border: 0;
+    width: 325px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: #9DD458;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+  
+  .cartButton:hover {
+    background: lighten(#9DD458 5%);
+}
+  
+  .cartButton:active {
+    background: darken(#9DD458 5%);
+}
+
+  .button {
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    overflow: hidden;
+}
+  
+  .delteBtn {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out;
+}

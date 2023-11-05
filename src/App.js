@@ -10,8 +10,10 @@ function App() {
       <Header/>
       <Overlay/>
       <Main/>
-      <Card/>
-      <Card/>
+      <div className='card-flex'>
+        <Card/>
+        <Card/>
+      </div>    
     </div>
   );
 }

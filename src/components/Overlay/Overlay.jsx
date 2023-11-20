@@ -3,13 +3,13 @@ import './Overlay.css'
 
 import btndelete from '../../images/корзина.svg'
 
-export default function Overlay() {
+export default function Overlay(props) {
   return (
-    <div style={{display: 'none'}} className='overlay'>
+    <div className='overlay'>
        <div className='overlay__drawer'>
         <div className='overlay__wraper'>
           <h2 className='draver__title'>Корзина</h2>
-          <img className='delteBtn' src={btndelete} alt='delete-button'/>
+          <img onClick={props.onClose} className='delteBtn' src={btndelete} alt='delete-button'/>
         </div>
         <div className='overlay__cart-btn'>
         <div className='overlay__cart-item'>

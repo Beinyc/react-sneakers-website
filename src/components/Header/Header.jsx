@@ -6,7 +6,7 @@ import cart from '../../images/cart.svg'
 import users from '../../images/users.svg'
 import folow from '../../images/folow.svg'
 
-export default function Header() {
+export default function Header(props) {
   return (
     <header className='header__box'>
         <div className="header__title">
@@ -18,7 +18,7 @@ export default function Header() {
         </div>
         <div className="header__right">
         <ul className='header__right-info'>
-          <li className='header__right-ptice'><img src={cart} className='header__right-image' /><span>1205 руб.</span></li>
+          <li onClick={props.onClickCart} className='header__right-ptice'><img src={cart} className='header__right-image' /><span>1205 руб.</span></li>
           <li className='header__right-ptice'><img src={folow} className='header__right-image'/>Закладки</li>
           <li><img src={users} className='header__right-image'/>Профиль</li>
         </ul>

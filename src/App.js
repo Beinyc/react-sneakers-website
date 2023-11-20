@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
   
-  const [cardOpened, setCardOpened] = useState(false)
+  const [cartOpened, setCartOpened] = useState(false)
   const [items, setItems] = useState([])
 
  React.useEffect(() => {
@@ -26,8 +26,8 @@ function App() {
 
   return (
     <div className="wrapper clear">
-      <Header/>
-      <Overlay/>
+      {cartOpened ? <Overlay onClose={() => setCartOpened(false)}/> : null}
+      <Header onClickCart={() => setCartOpened(true)}/>
       <Main/>
       <div className='card-flex'>
         {

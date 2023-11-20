@@ -2,6 +2,8 @@ import React from 'react'
 import './Card.css'
 
 export default function Card(props) {
+  const [] = React.useState();
+
   return (
       <div className='card__favorite'>
         <div className='card__favorites'>
@@ -17,7 +19,7 @@ export default function Card(props) {
               </div>
           </div>
             <button className='button'>
-            <img width={11} height={11} src='./img/buttons/add-button.svg' alt='Plus'/>
+            <img onClick={props.onPlus} src='./img/buttons/add-button.svg' alt='Plus'/>
           </button>
           </div>
         </div>

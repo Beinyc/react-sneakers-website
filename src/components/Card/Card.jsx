@@ -2,7 +2,11 @@ import React from 'react'
 import './Card.css'
 
 export default function Card(props) {
-  const [] = React.useState();
+  const [isAdded , setIsAdded] = React.useState(false);
+
+  const handleClickPlus = () => {
+    setIsAdded(!isAdded);
+  }
 
   return (
       <div className='card__favorite'>
@@ -19,7 +23,7 @@ export default function Card(props) {
               </div>
           </div>
             <button className='button'>
-            <img onClick={props.onPlus} src='./img/buttons/add-button.svg' alt='Plus'/>
+            <img onClick={handleClickPlus} src={isAdded ? '/img/buttons/plus.svg' : '/img/buttons/add-button.svg'} alt='Plus'/>
           </button>
           </div>
         </div>

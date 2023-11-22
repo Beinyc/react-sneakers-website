@@ -11,8 +11,9 @@ import { useState, useEffect } from 'react';
 
 function App() {
   
-  const [cartOpened, setCartOpened] = useState(false)
-  const [items, setItems] = useState([])
+  const [ cartOpened, setCartOpened ] = useState(false)
+  const [ cartItems, setCartItems ] = useState([])
+  const [ items, setItems ] = useState([])
 
  React.useEffect(() => {
   fetch('https://655b4fb0ab37729791a8e51d.mockapi.io/items')

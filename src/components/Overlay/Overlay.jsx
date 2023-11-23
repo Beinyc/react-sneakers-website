@@ -15,10 +15,11 @@ export default function Overlay({ onClose, items=[] }) {
           {
             items.map((obj) => (
               <div className='overlay__cart-item'>
-          <img className='overlay__image' src='./img/sneakers/sneakers 1.jpg' width={70} height={70}/>
+              <div className='overlay__image' style={{backgroundImage: `url(${obj.imageUrl})`}}></div>
+            {/* <img className='overlay__image' src='./img/sneakers/sneakers 1.jpg'  width={70} height={70}/> */}
             <div className='overlay__zone'>
-              <p className='overlay__zone-text'>Мужские Кроссовки Nike Blazer Mid Suede</p>
-              <b className='overlay__price'>12 999 руб.</b>
+              <p className='overlay__zone-text'>{obj.title}</p>
+              <b className='overlay__price'>{obj.price}руб.</b>
             </div>
               <img className='delteBtn' src={btndelete} alt='delete-button'/>
         </div>

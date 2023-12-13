@@ -3,16 +3,21 @@ import './Card.css'
 
 export default function Card({ imageUrl, title, price, onPlus }) {
   const [isAdded , setIsAdded] = React.useState(false);
+  const [isFollow, setIsFollow] = React.useState(false)
 
   const handleClickPlus = () => {
     onPlus({ imageUrl, title, price })
     setIsAdded(!isAdded);
   }
 
+  const handleFollowButton = () => {
+    setIsFollow(!isFollow);
+  }
+
   return (
       <div className='card__favorite'>
         <div className='card__favorites'>
-          <img src='/img/heard-unliked.svg' alt='unliked'/>
+          <img onClick={handleFollowButton} src={isFollow ? '/img/buttons/foloww-button.svg' : '/img/heard-unliked.svg'} alt='unliked'/>
         </div>
           <img width={133} height={112} src={imageUrl} alt='кроссовки'/>
           <h5 className='card__title'>{title}</h5>

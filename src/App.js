@@ -13,6 +13,7 @@ function App() {
   
   const [ items, setItems ] = useState([])
   const [ cartItems, setCartItems ] = useState([])
+  const [ searchValue, setSearchValue ] = useState('')
   const [ cartOpened, setCartOpened ] = useState(false)
   
   React.useEffect(() => {
@@ -29,15 +30,22 @@ function App() {
   setCartItems([... cartItems, obj]);
  }
 
+ const onCgangeSearchInput = (event) => {
+  setSearchValue(event.target.value)
+ }
+
   return (
     <div className="wrapper clear">
       {cartOpened && <Overlay items={cartItems} onClose={() => setCartOpened(false)}/>}
       <Header onClickCart={() => setCartOpened(true)}/>
-      <Main/>
+      <Main onCgangeSearchInput={onCgangeSearchInput} searchValue={searchValue}/>
       <div className='card-flex'>
         {
-          items.map((obj) => (
-            <Card 
+          items
+          .filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
+          .map((obj, index) => (
+            <Card
+              key={index} 
               title={obj.title} 
               price={obj.price} 
               imageUrl={obj.imageUrl} 

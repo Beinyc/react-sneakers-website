@@ -71,6 +71,13 @@
 .overlay__wraper {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
+}
+
+.overlay__wraper-top {
+    display: flex;
+    margin-bottom: 309px;
+    width: 325px;
     justify-content: space-between;
 }
 
@@ -89,7 +96,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 30px;
 }
 
 .delteBtn:hover {
@@ -131,4 +137,55 @@
     opacity: 0.5;
     cursor: pointer;
     transition: opacity 0.15s ease-in-out;
+}
+
+.cartEmpty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drawer__empty-tittle {
+    margin: 0;
+    padding: 0;
+    padding-top: 21px;
+    padding-bottom: 9px;
+    color: #000;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.drawer__empty-paragraph {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.4;
+    width: 285px;
+}
+
+.greenButton {
+    border: 0;
+    width: 245px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 18px;
+    background: #9DD458;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.drawer__empty-tittle_button {
+    color: white;
 }

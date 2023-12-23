@@ -20,8 +20,8 @@ export default function Overlay({ onClose, onRemove ,items=[] }) {
             {
               items.map((obj) => (
                 <div className='overlay__cart-item'>
-                <div className='overlay__image' style={{backgroundImage: `url(${obj.imageUrl})`}}></div>
-              {/* <img className='overlay__image' src='./img/sneakers/sneakers 1.jpg'  width={70} height={70}/> */}
+                {/* <div className='overlay__image' style={{backgroundImage: `url(${obj.imageUrl})`}}></div> */}
+              <img className='overlay__image' src='./img/sneakers/sneakers 1.jpg'  width={70} height={70}/>
               <div className='overlay__zone'>
                 <p className='overlay__zone-text'>{obj.title}</p>
                 <b className='overlay__price'>{obj.price}руб.</b>

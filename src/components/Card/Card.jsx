@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
 
-export default function Card({ imageUrl, title, price, onPlus }) {
+export default function Card({ imageUrl, title, price, onPlus, onFavorite }) {
   const [isAdded , setIsAdded] = React.useState(false);
   const [isFollow, setIsFollow] = React.useState(false)
 
@@ -11,6 +11,7 @@ export default function Card({ imageUrl, title, price, onPlus }) {
   }
 
   const handleFollowButton = () => {
+    onFavorite({ imageUrl, title, price })
     setIsFollow(!isFollow);
   }
 
